@@ -1,5 +1,7 @@
 package pageobjects;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
 public class AbstractPage {
@@ -8,6 +10,8 @@ public class AbstractPage {
 
     public final static String BASE_URL = "https://dominos.by/";
     public final static int WAIT_TIMEOUT_SECONDS = 10;
+
+    protected static final Logger logger = LogManager.getLogger();
 
     public AbstractPage(WebDriver driver) {
         this.driver = driver;

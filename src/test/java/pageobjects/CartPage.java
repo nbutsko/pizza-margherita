@@ -25,8 +25,7 @@ public class CartPage extends BasePage {
         List<String> productsInCartNames = driver.findElements(By.xpath(productsInCartLocator)).stream()
                 .map(WebElement::getText)
                 .collect(Collectors.toList());
+        logger.info(productsInCartNames.toString());
         return productsInCartNames.contains(productName);
     }
-
-
 }
