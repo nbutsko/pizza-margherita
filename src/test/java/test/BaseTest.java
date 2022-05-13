@@ -2,6 +2,8 @@ package test;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import pageobjects.BasePage;
+import pageobjects.CartPage;
 import pageobjects.HomePage;
 
 public class BaseTest extends AbstractTest {
@@ -10,7 +12,7 @@ public class BaseTest extends AbstractTest {
     public void testAdditionProductsToCart(){
         String pizzaName = "Маргарита";
         String drinkName = "Кока-Кола 1 л";
-        HomePage homePage = new HomePage(driver).openPageAndAcceptAllCookies()
+        CartPage homePage = new BasePage(driver).openPageAndAcceptAllCookies()
                 .clickButtonCloseBanner()
                 .clickButtonPizza()
                 .findProductByNameAndAddToCart(pizzaName)
