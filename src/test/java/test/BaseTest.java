@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import pageobjects.BasePage;
 import pageobjects.CartPage;
-import pageobjects.HomePage;
 
 public class BaseTest extends AbstractTest {
 
