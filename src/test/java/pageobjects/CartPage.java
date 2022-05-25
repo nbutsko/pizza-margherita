@@ -20,8 +20,8 @@ public class CartPage extends BasePage {
 
     public boolean isProductInCart(String productName){
         String productsInCartLocator = "//div[@class='cart-button__mini-bag']//div[@class='product-card__title']";
-        /*new WebDriverWait(driver, Duration.ofSeconds(WAIT_TIMEOUT_SECONDS))
-                .until(ExpectedConditions.elementToBeClickable(By.xpath(productsInCartLocator)));*/
+        new WebDriverWait(driver, Duration.ofSeconds(WAIT_TIMEOUT_SECONDS))
+                .until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(productsInCartLocator)));
         List<String> productsInCartNames = driver.findElements(By.xpath(productsInCartLocator)).stream()
                 .map(WebElement::getText)
                 .collect(Collectors.toList());
