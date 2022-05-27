@@ -57,7 +57,7 @@ public class BasePage extends AbstractPage {
             String productTitle = product.findElement(By.className("product-card__title")).getText();
             if (productTitle.contains(productName)) {
                 logger.info("Product added to card " + productTitle);
-                By buttonAddToCardXPath = By.xpath(".//div[@class='product-card__actions']/button");
+                By buttonAddToCardXPath = By.cssSelector("div.product-card__actions>button");
                 product.findElement(buttonAddToCardXPath).click();
             }
         }
