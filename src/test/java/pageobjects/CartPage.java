@@ -24,6 +24,6 @@ public class CartPage extends BasePage {
                 .map(WebElement::getText)
                 .collect(Collectors.toList());
         logger.info(productsInCartNames.toString());
-        return productsInCartNames.contains(productName);
+        return productsInCartNames.stream().anyMatch(s -> s.contains(productName));
     }
 }
