@@ -59,7 +59,6 @@ public class BasePage extends AbstractPage {
                 logger.info("Product added to card " + productTitle);
                 By buttonAddToCardXPath = By.cssSelector("div.product-card__actions>button");
                 product.findElement(buttonAddToCardXPath).click();
-                System.out.println("product " + productTitle);
             }
         }
         return this;
